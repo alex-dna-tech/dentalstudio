@@ -2,3 +2,7 @@ baseURL = 'https://dentalstudio.pp.ua/'
 languageCode = 'uk-ua'
 title = 'Стоматологічна клініка'
 theme = 'ananke'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

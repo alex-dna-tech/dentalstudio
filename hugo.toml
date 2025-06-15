@@ -1,0 +1,4 @@
+baseURL = 'https://dentalstudio.pp.ua/'
+languageCode = 'uk-ua'
+title = 'Стоматологічна клініка'
+theme = 'ananke'

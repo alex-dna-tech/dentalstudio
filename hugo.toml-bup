@@ -1,0 +1,44 @@
+baseURL = 'https://dentalstudio.pp.ua/'
+languageCode = 'uk-ua'
+title = 'Стоматологічна клініка'
+author = "Your Name"
+copyright = "Your Name"
+pagination.pagerSize = 10
+theme = "tailwind"
+
+[markup]
+  _merge = "deep"
+
+[params]
+  # dir name of your blog content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
+  [params.header]
+    logo = "logo.png"
+    title = ""
+  [params.footer]
+    since = 2025
+    poweredby = false
+
+[menu]
+  [[menu.main]]
+    identifier = "post"
+    name = "Post"
+    pageRef = "/posts"
+    weight = 10
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pageRef = "/about"
+    weight = 20
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

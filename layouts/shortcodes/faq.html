@@ -1,7 +1,7 @@
 {{ $data := .Inner | transform.Unmarshal }}
 <section class="bg-white">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+    <div class="py-8 px-4 mx-auto max-w-(--breakpoint-xl) lg:py-16 lg:px-6">
+        <div class="mx-auto max-w-(--breakpoint-md) text-center mb-8 lg:mb-12">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{{ $data.title | default "Frequently Asked Questions" }}</h2>
             {{ with $data.description }}
             <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">{{ . }}</p>
@@ -10,8 +10,8 @@
         
         <div class="space-y-6">
             {{ range $data.questions }}
-            <div class="border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-200">
-                <button class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors duration-200 focus:outline-none" 
+            <div class="border rounded-lg overflow-hidden bg-white shadow-xs hover:shadow-md transition-shadow duration-200">
+                <button class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors duration-200 focus:outline-hidden" 
                         onclick="this.parentElement.querySelector('.faq-content').classList.toggle('hidden');
                                  this.querySelector('svg').classList.toggle('rotate-180')">
                     <span class="text-lg font-medium text-gray-900">{{ .question }}</span>

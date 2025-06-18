@@ -1,6 +1,350 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --color-primary-50: #f9f9f9;
+  --color-primary-100: #e6e6e6;
+  --color-primary-200: #cccccc;
+  --color-primary-300: #a3a3a3;
+  --color-primary-400: #7a7a7a;
+  --color-primary-500: #525252;
+  --color-primary-600: #3d3d3d;
+  --color-primary-700: #2e2e2e;
+  --color-primary-800: #1f1f1f;
+  --color-primary-900: #0f0f0f;
+
+  --color-secondary-50: #faf5ff;
+  --color-secondary-100: #f3e8ff;
+  --color-secondary-200: #e9d5ff;
+  --color-secondary-300: #d8b4fe;
+  --color-secondary-400: #c084fc;
+  --color-secondary-500: #a855f7;
+  --color-secondary-600: #9333ea;
+  --color-secondary-700: #7e22ce;
+  --color-secondary-800: #6b21a8;
+  --color-secondary-900: #581c87;
+
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-heading: Plus Jakarta Sans, sans-serif;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility rounded-lg {
+  border-radius: 2rem;
+}
+
+@utility cta-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@utility cta-gradient {
+  background: linear-gradient(
+    calc(var(--gradient-angle) * 1deg),
+    var(--gradient-from),
+    var(--gradient-to)
+  );
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center px-6 py-3 font-medium transition duration-200 ease-in-out;
+  border-radius: 2rem;
+}
+
+@utility btn-primary {
+  @apply btn bg-primary-600 text-white hover:bg-primary-700 hover:scale-105;
+}
+
+@utility btn-secondary {
+  @apply btn bg-secondary-600 text-white hover:bg-secondary-700 hover:scale-105;
+}
+
+@utility btn-outline {
+  @apply btn border-2 border-primary-600 text-primary-600 hover:scale-105;
+}
+
+@utility container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+}
+
+@utility section {
+  @apply py-16 md:py-24;
+}
+
+@utility card {
+  @apply bg-white p-6 transition duration-200 hover:shadow-md;
+  border-radius: 2rem;
+}
+
+@utility nav-link {
+  @apply text-gray-600 hover:text-primary-600 font-bold transition duration-200;
+}
+
+@utility feature-grid {
+  @apply grid gap-8 md:grid-cols-2 lg:grid-cols-3;
+}
+
+@utility highlight {
+  /* Blog and Syntax Highlighting Styles */
+  @apply text-sm font-mono text-gray-200;
+
+  & table {
+    @apply w-full border-separate border-spacing-0;
+  }
+
+  & table td {
+    @apply p-0;
+  }
+
+  & table td:first-child {
+    @apply pr-4 text-right select-none text-gray-500 border-r border-gray-700;
+  }
+
+  & table td:last-child {
+    @apply pl-4 w-full;
+  }
+
+  & .k {
+    @apply text-purple-400 font-semibold;
+  }
+
+  & .kd {
+    @apply text-purple-400 font-semibold;
+  }
+
+  & .nf {
+    @apply text-blue-400;
+  }
+
+  & .nx {
+    @apply text-blue-400;
+  }
+
+  & .s {
+    @apply text-green-400;
+  }
+
+  & .s1 {
+    @apply text-green-400;
+  }
+
+  & .s2 {
+    @apply text-green-400;
+  }
+
+  & .mi {
+    @apply text-orange-400;
+  }
+
+  & .mf {
+    @apply text-orange-400;
+  }
+
+  & .c {
+    @apply text-gray-500 italic;
+  }
+
+  & .c1 {
+    @apply text-gray-500 italic;
+  }
+
+  & .cm {
+    @apply text-gray-500 italic;
+  }
+
+  & .o {
+    @apply text-yellow-400;
+  }
+
+  & .p {
+    @apply text-gray-400;
+  }
+}
+
+@utility k {
+  .highlight & {
+    @apply text-purple-400 font-semibold;
+  }
+}
+
+@utility kd {
+  .highlight & {
+    @apply text-purple-400 font-semibold;
+  }
+}
+
+@utility nf {
+  .highlight & {
+    @apply text-blue-400;
+  }
+}
+
+@utility nx {
+  .highlight & {
+    @apply text-blue-400;
+  }
+}
+
+@utility s {
+  .highlight & {
+    @apply text-green-400;
+  }
+}
+
+@utility s1 {
+  .highlight & {
+    @apply text-green-400;
+  }
+}
+
+@utility s2 {
+  .highlight & {
+    @apply text-green-400;
+  }
+}
+
+@utility mi {
+  .highlight & {
+    @apply text-orange-400;
+  }
+}
+
+@utility mf {
+  .highlight & {
+    @apply text-orange-400;
+  }
+}
+
+@utility c {
+  .highlight & {
+    @apply text-gray-500 italic;
+  }
+}
+
+@utility c1 {
+  .highlight & {
+    @apply text-gray-500 italic;
+  }
+}
+
+@utility cm {
+  .highlight & {
+    @apply text-gray-500 italic;
+  }
+}
+
+@utility o {
+  .highlight & {
+    @apply text-yellow-400;
+  }
+}
+
+@utility p {
+  .highlight & {
+    @apply text-gray-400;
+  }
+}
+
+@utility prose {
+  @apply max-w-none;
+
+  & h1 {
+    @apply font-heading font-bold text-gray-900;
+  }
+
+  & h2 {
+    @apply font-heading font-bold text-gray-900;
+  }
+
+  & h3 {
+    @apply font-heading font-bold text-gray-900;
+  }
+
+  & h4 {
+    @apply font-heading font-bold text-gray-900;
+  }
+
+  & h1 {
+    @apply text-4xl mb-8;
+  }
+
+  & h2 {
+    @apply text-3xl mt-12 mb-6;
+  }
+
+  & h3 {
+    @apply text-2xl mt-8 mb-4;
+  }
+
+  & p {
+    @apply text-gray-700 leading-relaxed mb-6;
+  }
+
+  & a {
+    @apply text-primary-600 hover:text-primary-700 no-underline;
+  }
+
+  & ul {
+    @apply my-6 ml-6;
+  }
+
+  & ol {
+    @apply my-6 ml-6;
+  }
+
+  & li {
+    @apply mb-2;
+  }
+
+  & blockquote {
+    @apply border-l-4 border-gray-200 pl-4 italic text-gray-700 my-8;
+  }
+
+  & img {
+    @apply rounded-lg shadow-lg my-8;
+  }
+
+  & code:not(pre code) {
+    @apply bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded-sm text-sm font-mono;
+  }
+}
+
+@utility table-of-contents {
+  @apply bg-gray-50 p-6 rounded-lg my-8;
+
+  & nav {
+    @apply space-y-2;
+  }
+
+  & a {
+    @apply text-gray-700 hover:text-primary-600 no-underline;
+  }
+
+  & ul {
+    @apply list-none ml-4 space-y-2;
+  }
+}
 
 @layer base {
   html {
@@ -13,175 +357,5 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-bold text-gray-900;
-  }
-}
-
-@layer utilities {
-  .rounded-lg {
-    border-radius: 2rem;
-  }
-}
-
-@layer components {
-  .cta-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .cta-gradient {
-    background: linear-gradient(calc(var(--gradient-angle) * 1deg), var(--gradient-from), var(--gradient-to));
-  }
-
-  .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 font-medium transition duration-200 ease-in-out;
-    border-radius: 2rem;
-  }
-
-  .btn-primary {
-    @apply btn bg-primary-600 text-white hover:bg-primary-700 hover:scale-105;
-  }
-
-  .btn-secondary {
-    @apply btn bg-secondary-600 text-white hover:bg-secondary-700 hover:scale-105;
-  }
-
-  .btn-outline {
-    @apply btn border-2 border-primary-600 text-primary-600 hover:scale-105;
-  }
-
-  .container {
-    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
-  }
-
-  .section {
-    @apply py-16 md:py-24;
-  }
-
-  .card {
-    @apply bg-white p-6 transition duration-200 hover:shadow-md;
-    border-radius: 2rem;
-  }
-
-  .nav-link {
-    @apply text-gray-600 hover:text-primary-600 font-bold transition duration-200;
-  }
-
-  .feature-grid {
-    @apply grid gap-8 md:grid-cols-2 lg:grid-cols-3;
-  }
-
-  /* Blog and Syntax Highlighting Styles */
-  .highlight {
-    @apply text-sm font-mono text-gray-200;
-  }
-
-  .highlight table {
-    @apply w-full border-separate border-spacing-0;
-  }
-
-  .highlight table td {
-    @apply p-0;
-  }
-
-  .highlight table td:first-child {
-    @apply pr-4 text-right select-none text-gray-500 border-r border-gray-700;
-  }
-
-  .highlight table td:last-child {
-    @apply pl-4 w-full;
-  }
-
-  .highlight .k, .highlight .kd {
-    @apply text-purple-400 font-semibold;
-  }
-
-  .highlight .nf, .highlight .nx {
-    @apply text-blue-400;
-  }
-
-  .highlight .s, .highlight .s1, .highlight .s2 {
-    @apply text-green-400;
-  }
-
-  .highlight .mi, .highlight .mf {
-    @apply text-orange-400;
-  }
-
-  .highlight .c, .highlight .c1, .highlight .cm {
-    @apply text-gray-500 italic;
-  }
-
-  .highlight .o {
-    @apply text-yellow-400;
-  }
-
-  .highlight .p {
-    @apply text-gray-400;
-  }
-
-  .prose {
-    @apply max-w-none;
-  }
-
-  .prose h1, .prose h2, .prose h3, .prose h4 {
-    @apply font-heading font-bold text-gray-900;
-  }
-
-  .prose h1 {
-    @apply text-4xl mb-8;
-  }
-
-  .prose h2 {
-    @apply text-3xl mt-12 mb-6;
-  }
-
-  .prose h3 {
-    @apply text-2xl mt-8 mb-4;
-  }
-
-  .prose p {
-    @apply text-gray-700 leading-relaxed mb-6;
-  }
-
-  .prose a {
-    @apply text-primary-600 hover:text-primary-700 no-underline;
-  }
-
-  .prose ul, .prose ol {
-    @apply my-6 ml-6;
-  }
-
-  .prose li {
-    @apply mb-2;
-  }
-
-  .prose blockquote {
-    @apply border-l-4 border-gray-200 pl-4 italic text-gray-700 my-8;
-  }
-
-  .prose img {
-    @apply rounded-lg shadow-lg my-8;
-  }
-
-  .prose code:not(pre code) {
-    @apply bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono;
-  }
-
-  .table-of-contents {
-    @apply bg-gray-50 p-6 rounded-lg my-8;
-  }
-
-  .table-of-contents nav {
-    @apply space-y-2;
-  }
-
-  .table-of-contents a {
-    @apply text-gray-700 hover:text-primary-600 no-underline;
-  }
-
-  .table-of-contents ul {
-    @apply list-none ml-4 space-y-2;
   }
 }

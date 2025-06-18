@@ -60,7 +60,7 @@ paginatePath = "page"
   
   [params.header]
     # Header background and border styles (optional)
-    background = "bg-white/80 backdrop-blur-sm"
+    background = "bg-white/80 backdrop-blur-xs"
     border = "border-b border-gray-100"
     
     # Logo configuration
@@ -231,3 +231,8 @@ paginatePath = "page"
     name = "Privacy Policy"
     url = "/privacy"
     weight = 2
+
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

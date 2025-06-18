@@ -1,8 +1,8 @@
 {{ $data := .Inner | unmarshal }}
 <section class="bg-white">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <div class="py-8 px-4 mx-auto max-w-(--breakpoint-xl) lg:py-16 lg:px-6">
         {{ with $data.title }}
-        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+        <div class="mx-auto max-w-(--breakpoint-md) text-center mb-8 lg:mb-12">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">{{ . }}</h2>
             {{ with $data.description }}
             <p class="mb-5 font-light text-gray-500 sm:text-xl">{{ . }}</p>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 
-                <ul class="mb-8 space-y-4 flex-grow">
+                <ul class="mb-8 space-y-4 grow">
                     {{ range $plan.features }}
                     <li class="flex items-center">
                         <svg class="w-5 h-5 {{ if $plan.featured }}text-white{{ else }}text-green-500{{ end }} mr-2" fill="currentColor" viewBox="0 0 20 20">

@@ -59,12 +59,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
     
     <!-- Main CSS -->
-    {{ $css := resources.Get "css/main.css" }}
-    {{ $css = $css | css.PostCSS }}
-    {{ if hugo.IsProduction }}
-        {{ $css = $css | minify | fingerprint | resources.PostProcess }}
+    {{ with resources.Get "css/main.css" }}
+      {{ $opts := dict "minify" (not hugo.IsDevelopment) }}
+      {{ with . | css.TailwindCSS $opts }}
+        {{ if hugo.IsDevelopment }}
+          <link rel="stylesheet" href="{{ .RelPermalink }}">
+        {{ else }}
+          {{ with . | fingerprint }}
+            <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+          {{ end }}
+        {{ end }}
+      {{ end }}
     {{ end }}
-    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 
     <!-- Additional Meta Tags from Front Matter -->
     {{ with .Params.customMeta }}

@@ -1,0 +1,60 @@
+{{ $path := "images/certificates" }}
+{{ $files := readDir (path.Join "assets" $path) }}
+
+{{ $background_color := .Get "background-color" | default  "bg-gray-50" }}
+<section class="section {{ $background_color }}">
+  <div class="container">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      {{ with .Get "title" }}
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">{{ . }}</h2>
+      {{ end }}
+      {{ with .Get "description" }}
+        <p class="text-xl text-gray-600">{{ . }}</p>
+      {{ end }}
+    </div>
+
+    <div class="relative pt-5 overflow-hidden">
+      <div
+        class="flex gap-8{{ if ne (.Get "animate" | default "true") "false" }}
+          animate
+        {{ end }}">
+        {{ range $files }}
+          {{ with resources.Get (path.Join $path .Name) }}
+            {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+              <img
+                class="h-[300px] w-auto object-contain"
+                src="{{ .RelPermalink }}"
+                alt="{{ index (strings.Split (path.BaseName .Name) "-") 0 }}" />
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .animate {
+    animation: 90s cert-scroll infinite linear;
+  }
+
+  @keyframes cert-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-500%);
+    }
+  }
+
+  .animate:hover {
+    animation-play-state: paused;
+  }
+
+  /* Mobile-specific animation speed */
+  @media (max-width: 768px) {
+    .animate {
+      animation: 15s cert-scroll infinite linear;
+    }
+  }
+</style>

@@ -1,94 +1,105 @@
 ---
-title: Home
-client_logos:
-  - name: "Customer 1"
-    logo: "/images/logos/customer-1.png"
-  - name: "Customer 2"
-    logo: "/images/logos/customer-2.png"
-  - name: "Customer 3"
-    logo: "/images/logos/customer-3.png"
-  - name: "Customer 4"
-    logo: "/images/logos/customer-4.png"
-  - name: "Customer 5"
-    logo: "/images/logos/customer-5.png"
-testimonials:
-  - name: "John Smith"
-    title: "CTO at TechStartup"
-    avatar: "/images/testimonial-1.svg"
-    quote: "We built our SaaS website in record time. The performance is incredible, and our users love the modern, clean design."
-  - name: "Sarah Johnson"
-    title: "Founder at WebFlow"
-    avatar: "/images/testimonial-1.svg"
-    quote: "The combination of Hugo and TailwindCSS delivers lightning-fast performance. Our website loads instantly, which has significantly improved our conversion rates."
-  - name: "Michael Chen"
-    title: "Lead Developer at CloudTech"
-    avatar: "/images/testimonial-1.svg"
-    quote: "This theme made it easy to create a professional SaaS website. The build times are incredibly fast, and the code is clean and maintainable."
+title: Стоматологічна клініка DentalSTUDIO
 ---
 
-{{< hero 
-    headline="Build Your SaaS Website"
-    sub_headline="Create stunning, responsive websites that load instantly. Built with Hugo and TailwindCSS for maximum performance and flexibility."
-    primary_button_text="Get Started Free"
-    primary_button_url="#"
-    secondary_button_text="View Demo"
-    secondary_button_url="#"
-    hero_image="/images/hero-dashboard.svg"
-    gradient-from="#dbeafe"
-    gradient-to="#f3e8ff"
-    gradient-angle="180"
->}}
+{{< hero
+headline="Стоматологічна клініка у Києві "
+sub-headline="Лікування, протезування, вирівнювання зубів з 2005 року."
+primary-button-text="Замовити консультацію"
+primary-button-url="#"
+secondary-button-text="Наші роботи"
+secondary-button-url="/nashi-roboty"
+hero-image="images/main.jpg"
+gradient-from="#dbeafe"
+gradient-to="#f3e8ff"
+gradient-angle="180" >}}
 
-{{< client-logos animate="true" >}}
-
-{{< features-section 
-    title="Modern Features for Modern Websites"
-    description="Discover how our theme helps you build fast, beautiful SaaS websites with ease."
->}}
+{{< features-section
+title="Наші можливості"
+description="**Стоматологічна клініка** пропонує **повний спектр послуг** з відновлення здоров’я та естетики зубів. Працюємо з 2005 року, використовуємо **сучасні методики** та індивідуальний підхід." >}}
 
 {{< feature
-    title="Lightning-Fast Performance"
-    description="Leverage Hugo's blazing-fast build times and optimized output. Your website loads instantly, providing an exceptional user experience."
-    badge="Performance"
-    badgeColor="#2563eb"
-    image="/images/feature-1.svg"
-    buttonText="Learn More"
-    buttonLink="/features/performance/"
-    features="Sub-second page loads,Optimized assets,Minimal JavaScript,CDN-ready output"
-    imagePosition="right"
->}}
-
-{{< feature
-    title="Beautiful Design System"
-    description="Create stunning user interfaces with our comprehensive design system built on TailwindCSS. Customize everything to match your brand."
-    badge="Design"
-    badgeColor="#7c3aed"
-    image="/images/feature-2.svg"
-    buttonText="Learn More"
-    buttonLink="/features/design-system/"
-    features="Modern UI components,Responsive design,Custom typography,Flexible layouts"
-    imagePosition="left"
->}}
-
-{{< feature
-    title="Developer Experience"
-    description="Enjoy a seamless development experience with hot reload, component-based architecture, and clean, maintainable code."
-    badge="Development"
-    badgeColor="#16a34a"
-    image="/images/feature-3.svg"
-    buttonText="Learn More"
-    buttonLink="/features/developer-experience/"
-    features="Component system,Easy customization,Clean code,Detailed documentation"
-    imagePosition="right"
->}}
+badge="Послуги"
+badgeColor="#7c3aed"
+image="/images/feature-2.svg"
+buttonText="Більше"
+buttonLink="/features/design-system/"
+features="🦷 Терапевтична стоматологія, 🔄 Ортодонтія та вирівнювання зубів, 🦋 Стоматологічне протезування, ✨ Естетична стоматологія, ⚡ Екстрена стоматологічна допомога"
+imagePosition="left" >}}
 
 {{< /features-section >}}
 
-{{< testimonials 
-    title="Trusted by Modern Web Teams"
-    description="See how teams are building better websites with our theme."
-    animate="true"
-    background-color="#f1f5f9"
->}}
+{{< section-container class="py-20 bg-gray-50" >}}
+
+<div class="max-w-6xl mx-auto">
+<h2 class="text-3xl font-bold text-center mb-12">Company Values</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+{{< value-card
+    title="Innovation First"
+    icon="lightbulb"
+    description="We constantly push boundaries and embrace new technologies to solve complex challenges." >}}
+{{< value-card
+    title="Customer Success"
+    icon="users"
+    description="Our customers' success is our success. We're committed to delivering exceptional value." >}}
+{{< value-card
+    title="Transparency"
+    icon="eye"
+    description="We believe in open communication and building trust through transparency." >}}
+</div>
+</div>
+
+{{< certificates
+title="Наші сертифікати"
+description="Наші досягнення"
+animate="true"
+background-color="#f1f5f9" >}}
 
 {{< cta >}}
+
+{{< features-section >}}
+
+## Основні послуги стоматології у нашій клініці
+
+### 🦷 Терапевтична стоматологія
+
+- Лікування карієсу, пульпіту, періодонтиту
+- Реставрація зубів **фотополімерними матеріалами**
+- Якісне пломбування
+
+### 🔄 Ортодонтія та вирівнювання зубів
+
+- Корекція прикусу
+- Підготовка до протезування
+- Лікування на брекетах та елайнерах
+
+### 🦋 Стоматологічне протезування
+
+- Незнімні протези (вініри, коронки, мости)
+- Знімні протези (акуратні та комфортні конструкції)
+- Повне відновлення жувальної функції
+
+### ✨ Естетична стоматологія
+
+- Професійне відбілювання зубів
+- Художня реставрація
+- Гігієна та відбілювання
+
+### ⚡ Екстрена стоматологічна допомога
+
+- Швидке зняття болю
+- Лікування гострих станів
+
+## Чому обирають нашу клініку?
+
+✅ **Досвід** – працюємо з 2005 року  
+✅ **Безболісне лікування** – сучасна анестезія  
+✅ **Збереження зубів** – мінімальне втручання  
+✅ **Сучасне обладнання** – точність та якість
+
+📍 **Київ** | Запишіться на консультацію вже сьогодні!
+{{< /features-section >}}
+
+{{< /section-container >}}
+
+{{< google-maps-location height="500" location="ДЕНТАЛ СТУДИО ЧП" >}}

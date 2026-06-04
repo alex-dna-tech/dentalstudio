@@ -1,6 +1,7 @@
 ---
-title: "Privacy Policy"
-layout: "simple"
+draft: true
+title: 'Privacy Policy'
+layout: 'simple'
 ---
 
 ## Introduction
@@ -13,17 +14,17 @@ At Saasify, we take your privacy seriously. This Privacy Policy explains how we 
 
 ### Personal Information
 
-* **Name and email address**
-* **Billing information**
-* **Usage data and analytics**
-* **Communication preferences**
+- **Name and email address**
+- **Billing information**
+- **Usage data and analytics**
+- **Communication preferences**
 
 ### Automatically Collected Information
 
-* **IP addresses**
-* **Browser type**
-* **Device information**
-* **Cookies and tracking technologies**
+- **IP addresses**
+- **Browser type**
+- **Device information**
+- **Cookies and tracking technologies**
 
 ---
 
@@ -31,15 +32,15 @@ At Saasify, we take your privacy seriously. This Privacy Policy explains how we 
 
 We use the collected information for:
 
-* **Service Delivery**  
+- **Service Delivery**  
   Providing and maintaining our service
-* **Updates**  
+- **Updates**  
   Notifying you about changes to our service
-* **Support**  
+- **Support**  
   Providing customer support
-* **Transactions**  
+- **Transactions**  
   Processing your transactions
-* **Analytics**  
+- **Analytics**  
   Analyzing usage patterns to improve our service
 
 ---
@@ -54,9 +55,9 @@ We implement appropriate technical and organizational security measures to prote
 
 We may employ third-party companies and individuals to:
 
-* Facilitate our service
-* Provide service-related services
-* Assist in analyzing service usage
+- Facilitate our service
+- Provide service-related services
+- Assist in analyzing service usage
 
 ---
 
@@ -64,11 +65,11 @@ We may employ third-party companies and individuals to:
 
 You have the right to:
 
-* **Access** your personal data
-* **Correct** inaccurate data
-* **Request deletion** of your data
-* **Object** to data processing
-* **Export** your data
+- **Access** your personal data
+- **Correct** inaccurate data
+- **Request deletion** of your data
+- **Object** to data processing
+- **Export** your data
 
 ---
 
@@ -82,7 +83,7 @@ We may update our Privacy Policy from time to time. We will notify you of any ch
 
 If you have questions about this Privacy Policy, please contact us at:
 
-* **Email:** privacy@saasify.com
-* **Address:** 123 Tech Street, San Francisco, CA 94105
+- **Email:** privacy@saasify.com
+- **Address:** 123 Tech Street, San Francisco, CA 94105
 
-*Last Updated: January 2024*
+_Last Updated: January 2024_

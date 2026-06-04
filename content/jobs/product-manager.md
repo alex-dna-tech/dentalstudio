@@ -1,11 +1,12 @@
 ---
-title: "Product Manager"
+title: 'Product Manager'
 date: 2023-11-14
 description: "We're seeking a Product Manager to drive our product strategy and roadmap"
-location: "San Francisco, CA (Hybrid)"
-type: "Full-time"
-salary: "$130K - $180K"
-layout: "job-single"
+location: 'San Francisco, CA (Hybrid)'
+type: 'Full-time'
+salary: '$130K - $180K'
+layout: 'job-single'
+draft: true
 ---
 
 We're looking for a Product Manager to join our team and help shape the future of our product.

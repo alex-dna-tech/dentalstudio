@@ -1,11 +1,12 @@
 ---
-title: "Customizing Your Hugo Theme: A Deep Dive"
+title: 'Customizing Your Hugo Theme: A Deep Dive'
 date: 2023-07-21
-author: "Jane Smith"
-description: "Learn how to customize your Hugo theme to create a unique website that matches your brand and requirements."
-categories: ["Development"]
-tags: ["hugo", "themes", "customization", "web-design"]
-featured_image: "/images/blog/blog-2.webp"
+author: 'Jane Smith'
+description: 'Learn how to customize your Hugo theme to create a unique website that matches your brand and requirements.'
+categories: ['Development']
+tags: ['hugo', 'themes', 'customization', 'web-design']
+featured_image: '/images/blog/blog-2.webp'
+draft: true
 ---
 
 {{< toc >}}
@@ -24,18 +25,16 @@ Before diving into customization, it's important to understand how Hugo themes a
 
 The easiest way to start customizing your theme is by modifying the CSS:
 
-{{< code css "assets/css/main.css" >}}
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --font-family: 'Inter', sans-serif;
+--primary-color: #007bff;
+--secondary-color: #6c757d;
+--font-family: 'Inter', sans-serif;
 }
 
 body {
-    font-family: var(--font-family);
-    color: #333;
+font-family: var(--font-family);
+color: #333;
 }
-{{< /code >}}
 
 ### 2. Layout Modifications
 
@@ -47,17 +46,14 @@ You can override any layout file from the theme by creating a matching file in y
 
 Shortcodes are a powerful way to add custom functionality:
 
-{{< code html "layouts/shortcodes/custom-alert.html" >}}
 <div class="alert alert-{{ .Get 0 }}">
     {{ .Inner | markdownify }}
 </div>
-{{< /code >}}
 
 ### Working with Partials
 
 Partials help keep your code DRY and maintainable:
 
-{{< code html "layouts/partials/custom-header.html" >}}
 <header class="site-header">
     <nav>
         {{ range .Site.Menus.main }}
@@ -65,7 +61,6 @@ Partials help keep your code DRY and maintainable:
         {{ end }}
     </nav>
 </header>
-{{< /code >}}
 
 ## Best Practices
 
@@ -85,20 +80,19 @@ Partials help keep your code DRY and maintainable:
 
 ### Custom Homepage Layout
 
-{{< code html "layouts/index.html" >}}
 {{ define "main" }}
+
 <div class="homepage">
     {{ partial "hero.html" . }}
     {{ partial "featured-posts.html" . }}
     {{ partial "newsletter.html" . }}
 </div>
 {{ end }}
-{{< /code >}}
 
 ### Custom Taxonomy Pages
 
-{{< code html "layouts/taxonomy/category.html" >}}
 {{ define "main" }}
+
 <div class="category-page">
     <h1>{{ .Title }}</h1>
     <div class="posts-grid">
@@ -108,7 +102,6 @@ Partials help keep your code DRY and maintainable:
     </div>
 </div>
 {{ end }}
-{{< /code >}}
 
 ## Conclusion
 

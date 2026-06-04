@@ -16,20 +16,20 @@ Check [https://hugo-theme-tailwind.tomo.dev/](https://hugo-theme-tailwind.tomo.d
 
 ## Features
 
- * High Lighthouse score
- * Dark mode - switch between light and dark mode, or default by system prefers.
- * SVG icons thanks to [tabler icons](https://tabler-icons.io/)
- * Google Analytics - add your Google Analytics ID to `hugo.toml`
- * Comments settings for [disqus](https://disqus.com/) and [giscus](https://giscus.app/)
- * Social media link data settings
- * Additional short code: bilibili, asciinema
- * Responsive design
- * Multilingual
- * Default image process for lazy load and srcset
- * Search (by using [fuse.js](https://fusejs.io/) and [mark.js](https://markjs.io/))
- * Image support for article (using `image` param in front matter)
- * Structured data [JSON-LD](https://json-ld.org/) for article (enable `jsonLD` in config file or front matter)
- * Simple [PWA](https://web.dev/add-manifest/) support - check `params.pwa` in config file
+- High Lighthouse score
+- Dark mode - switch between light and dark mode, or default by system prefers.
+- SVG icons thanks to [tabler icons](https://tabler-icons.io/)
+- Google Analytics - add your Google Analytics ID to `hugo.toml`
+- Comments settings for [disqus](https://disqus.com/) and [giscus](https://giscus.app/)
+- Social media link data settings
+- Additional short code: bilibili, asciinema
+- Responsive design
+- Multilingual
+- Default image process for lazy load and srcset
+- Search (by using [fuse.js](https://fusejs.io/) and [mark.js](https://markjs.io/))
+- Image support for article (using `image` param in front matter)
+- Structured data [JSON-LD](https://json-ld.org/) for article (enable `jsonLD` in config file or front matter)
+- Simple [PWA](https://web.dev/add-manifest/) support - check `params.pwa` in config file
 
 ## Installation
 
@@ -53,8 +53,8 @@ git submodule update --remote
 
 ```toml
 [module]
-  [[module.imports]]
-    path = "github.com/tomowang/hugo-theme-tailwind"
+[[module.imports]]
+path = "github.com/tomowang/hugo-theme-tailwind"
 ```
 
 3. Finally, run `hugo mod get -u` to download the theme.
@@ -77,34 +77,34 @@ languageCode = "en"
 theme = "tailwind"
 
 [markup]
-  _merge = "deep"
+_merge = "deep"
 
 [params]
-  # dir name of your blog content (default is `content/posts`).
-  # the list of set content will show up on your index page (baseurl).
-  contentTypeName = "posts"
+# dir name of your blog content (default is `content/posts`).
+# the list of set content will show up on your index page (baseurl).
+contentTypeName = "posts"
 
-  [params.header]
-    logo = "logo.webp"
-    title = ""
+[params.header]
+logo = "logo.webp"
+title = ""
 
-  [params.footer]
-    since = 2023
-    poweredby = true
+[params.footer]
+since = 2023
+poweredby = true
 
 [menu]
 
-  [[menu.main]]
-    identifier = "post"
-    name = "Post"
-    pageRef = "/posts"
-    weight = 10
+[[menu.main]]
+identifier = "post"
+name = "Post"
+pageRef = "/posts"
+weight = 10
 
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    pageRef = "/about"
-    weight = 20
+[[menu.main]]
+identifier = "about"
+name = "About"
+pageRef = "/about"
+weight = 20
 
 [taxonomies]
 category = "categories"
@@ -116,18 +116,18 @@ For advanced usage, please refer to config directory `config/_default` and
 `exampleSite/config/_default`.
 Some of the configuration options are:
 
- * `markup`: goldmark and options for markdown rendering
- * `params.header`: header settings (logo and sticky navbar)
- * `params.footer`: footer settings (copyright years, powered by, etc.)
- * `contentTypeName`: dir name of your blog content (default is `content/posts`).
- * `params.taxonomies.icons`: icons for taxonomies (categories, tags, series, etc.).
- * `params.giscus`: giscus settings
- * `params.social_media`: social media links shown in the footer
- * `params.search`: search settings
- * `params.author`: author used in the JSON-LD
- * `params.showAuthor`: show author name in article list and article page
- * `params.jsonLD`: enable or disable JSON-LD (default disabled)
- * `params.pwa`: enable or disable PWA (default disabled)
+- `markup`: goldmark and options for markdown rendering
+- `params.header`: header settings (logo and sticky navbar)
+- `params.footer`: footer settings (copyright years, powered by, etc.)
+- `contentTypeName`: dir name of your blog content (default is `content/posts`).
+- `params.taxonomies.icons`: icons for taxonomies (categories, tags, series, etc.).
+- `params.giscus`: giscus settings
+- `params.social_media`: social media links shown in the footer
+- `params.search`: search settings
+- `params.author`: author used in the JSON-LD
+- `params.showAuthor`: show author name in article list and article page
+- `params.jsonLD`: enable or disable JSON-LD (default disabled)
+- `params.pwa`: enable or disable PWA (default disabled)
 
 For social media link data, you can refer entries in `params.social_media.items`
 (You can add more or disable existing entries in `params.social_media.items`).
@@ -150,18 +150,18 @@ The theme folder structure is as follows:
 
 You can extend the theme by creating following files in your site folder:
 
-* `layouts/partials/custom_head.html`
-* `layouts/partials/custom_footer.html`
+- `layouts/partials/custom_head.html`
+- `layouts/partials/custom_footer.html`
 
 ### Update stylesheets
 
 This theme use Tailwind CSS for styling. If you want to make some changes,
 use `pnpm install` to install dependencies.
 
- * Development: `pnpm dev`, this will generate css for theme users and start example site.
+- Development: `pnpm dev`, this will generate css for theme users and start example site.
 
 > `exampleSite` is fetched from https://github.com/gohugoio/hugoBasicExample
-with some modifications.
+> with some modifications.
 
 ### Add new icons
 
@@ -172,9 +172,7 @@ name in your site configuration. Or if you want to update theme layout content,
 you can use the following code.
 
 ```html
-<i class="h-6 w-6 flex-none">
-  {{ partial "icon.html" "brightness-down" }}
-</i>
+<i class="h-6 w-6 flex-none"> {{ partial "icon.html" "brightness-down" }} </i>
 ```
 
 ## Star History

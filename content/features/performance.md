@@ -1,21 +1,22 @@
 ---
-title: "Lightning-Fast Performance"
+title: 'Lightning-Fast Performance'
 description: "Leverage Hugo's blazing-fast build times and optimized output. Your website loads instantly, providing an exceptional user experience."
-layout: "feature"
-badge: "Performance"
-badgeColor: "#2563eb"
+layout: 'feature'
+badge: 'Performance'
+badgeColor: '#2563eb'
 features:
-  - title: "Sub-second Page Loads"
+  - title: 'Sub-second Page Loads'
     description: "Experience instant page transitions with Hugo's static site generation. Pages load in milliseconds, ensuring visitors stay engaged."
-  - title: "Optimized Assets"
-    description: "Automatically optimize images, CSS, and JavaScript. Reduce file sizes without compromising quality for faster load times."
-  - title: "Minimal JavaScript"
-    description: "Built with minimal JavaScript dependencies. Pages remain fast and functional while keeping the bundle size small."
-  - title: "CDN-Ready Output"
-    description: "Deploy your site to any CDN for global distribution. Static files are optimized for edge caching and maximum performance."
+  - title: 'Optimized Assets'
+    description: 'Automatically optimize images, CSS, and JavaScript. Reduce file sizes without compromising quality for faster load times.'
+  - title: 'Minimal JavaScript'
+    description: 'Built with minimal JavaScript dependencies. Pages remain fast and functional while keeping the bundle size small.'
+  - title: 'CDN-Ready Output'
+    description: 'Deploy your site to any CDN for global distribution. Static files are optimized for edge caching and maximum performance.'
 demo:
-  description: "See how our optimized build process delivers lightning-fast page loads and smooth transitions."
-  image: "/images/feature-1.svg"
+  description: 'See how our optimized build process delivers lightning-fast page loads and smooth transitions.'
+  image: '/images/feature-1.svg'
+  draft: true
 ---
 
 ## Built for Speed
@@ -32,18 +33,21 @@ Our theme is engineered from the ground up with performance in mind. By leveragi
 ### Optimization Features
 
 #### Asset Optimization
+
 - Automatic image optimization and WebP conversion
 - CSS minification and purging of unused styles
 - JavaScript bundling and tree-shaking
 - Lazy loading of images and components
 
 #### Caching Strategy
+
 - Efficient browser caching with proper headers
 - Static asset fingerprinting
 - Pre-rendered HTML for instant loads
 - Service worker for offline capabilities
 
 #### CDN Integration
+
 - Built for global distribution
 - Edge caching ready
 - Automatic cache invalidation

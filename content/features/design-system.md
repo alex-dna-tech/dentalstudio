@@ -1,21 +1,22 @@
 ---
-title: "Beautiful Design System"
-description: "Create stunning user interfaces with our comprehensive design system built on TailwindCSS. Customize everything to match your brand."
-layout: "feature"
-badge: "Design"
-badgeColor: "#7c3aed"
+title: 'Beautiful Design System'
+description: 'Create stunning user interfaces with our comprehensive design system built on TailwindCSS. Customize everything to match your brand.'
+layout: 'feature'
+badge: 'Design'
+badgeColor: '#7c3aed'
 features:
-  - title: "Modern UI Components"
-    description: "A complete set of pre-built components designed for SaaS websites. From navigation bars to pricing tables, everything you need is included."
-  - title: "Responsive Design"
-    description: "Every component is fully responsive and tested across all device sizes. Your website will look great on everything from phones to large displays."
-  - title: "Custom Typography"
-    description: "Carefully crafted typography system with perfect vertical rhythm. Easily customize fonts and sizes to match your brand guidelines."
-  - title: "Flexible Layouts"
-    description: "Modular layout system that adapts to your content. Create unique page layouts while maintaining consistent spacing and alignment."
+  - title: 'Modern UI Components'
+    description: 'A complete set of pre-built components designed for SaaS websites. From navigation bars to pricing tables, everything you need is included.'
+  - title: 'Responsive Design'
+    description: 'Every component is fully responsive and tested across all device sizes. Your website will look great on everything from phones to large displays.'
+  - title: 'Custom Typography'
+    description: 'Carefully crafted typography system with perfect vertical rhythm. Easily customize fonts and sizes to match your brand guidelines.'
+  - title: 'Flexible Layouts'
+    description: 'Modular layout system that adapts to your content. Create unique page layouts while maintaining consistent spacing and alignment.'
 demo:
-  description: "Explore our comprehensive design system built with TailwindCSS."
-  image: "/images/feature-2.svg"
+  description: 'Explore our comprehensive design system built with TailwindCSS.'
+  image: '/images/feature-2.svg'
+draft: true
 ---
 
 ## Comprehensive Design System
@@ -25,12 +26,14 @@ Our theme includes a complete design system that makes it easy to create beautif
 ### Design Components
 
 #### Core Elements
+
 - Typography system with perfect vertical rhythm
 - Color palette with semantic variables
 - Spacing and sizing scales
 - Grid and layout systems
 
 #### UI Components
+
 - Navigation components (headers, footers, menus)
 - Hero sections and feature displays
 - Cards and content containers
@@ -43,6 +46,7 @@ Our theme includes a complete design system that makes it easy to create beautif
 #### Design Features
 
 ##### Customization
+
 - Easy theme customization through TailwindCSS
 - Brand color management
 - Typography customization
@@ -50,6 +54,7 @@ Our theme includes a complete design system that makes it easy to create beautif
 - Component variants
 
 ##### Accessibility
+
 - WCAG 2.1 compliant components
 - Proper ARIA attributes
 - Keyboard navigation support
@@ -57,6 +62,7 @@ Our theme includes a complete design system that makes it easy to create beautif
 - Screen reader optimized
 
 ##### Responsive Design
+
 - Mobile-first approach
 - Breakpoint system
 - Fluid typography

@@ -1,6 +1,7 @@
 ---
-title: "License"
-layout: "simple"
+draft: true
+title: 'License'
+layout: 'simple'
 ---
 
 ## MIT License

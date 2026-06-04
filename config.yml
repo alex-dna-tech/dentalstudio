@@ -1,0 +1,164 @@
+title: 'Dental Studio'
+baseURL: 'https://dentalstudio.pp.ua/'
+languages:
+  ua:
+    languageCode: 'uk-ua'
+    languageName: 'Українська'
+    menus:
+      main:
+        - name: 'Наша клініка'
+          weight: 1
+          url: '/nasha-klinika'
+        - name: 'Наші лікарі'
+          url: '/nashi-likari'
+          weight: 2
+        - name: 'Ми можемо'
+          url: '/blog'
+          weight: 3
+        - name: 'Ми можемо'
+          url: '/blog'
+          weight: 4
+        - name: 'Гарантії'
+          url: '/blog'
+          weight: 5
+        - name: 'Акції'
+          url: '/blog'
+          weight: 6
+        - name: 'Наші роботи'
+          url: '/blog'
+          weight: 7
+
+      footer_column_1:
+        - name: 'Performance'
+          url: '/features/performance/'
+          weight: 1
+        - name: 'Design System'
+          url: '/features/design-system/'
+          weight: 2
+        - name: 'Developer Experience'
+          url: '/features/developer-experience/'
+          weight: 3
+
+      footer_column_2:
+        - name: 'Blog'
+          url: '/blog'
+          weight: 1
+        - name: 'About Us'
+          url: '/company'
+          weight: 2
+        - name: 'Careers'
+          url: '/careers'
+          weight: 3
+
+      footer_column_3:
+        - name: 'License'
+          url: '/license'
+          weight: 1
+        - name: 'Privacy Policy'
+          url: '/privacy'
+          weight: 2
+
+enableGitInfo: true
+
+taxonomies:
+  category: 'categories'
+  tag: 'tags'
+
+pagination:
+  pageSize: 6
+  paginatePath: 'page'
+
+params:
+  author: 'Dental Studio'
+  description: ''
+
+  google_maps_api_key: 'AIzaSyBp3MaMPsKbRNyxGpW99wzLgwaqOV37ILw'
+
+  cert: 'images/certificates'
+
+  cta:
+    enable: true
+    title: 'Ready to Build Your SaaS Website?'
+    description: 'Join companies already using our theme to create beautiful, high-performance websites.'
+    gradient_from: '#2563eb'
+    gradient_to: '#7c3aed'
+    gradient_angle: 30
+    primary_button:
+      text: 'Запишіться на консультацію вже сьогодні!'
+      url: '/'
+
+  social:
+    facebook: 'https://www.facebook.com/Dental-Studio-158999034629525'
+
+  footer:
+    column_1_title: 'Features'
+    column_2_title: 'COMPANY'
+    column_3_title: 'LEGAL'
+
+  blog:
+    enable: true
+    title: 'Latest Articles'
+    subtitle: 'Learn more about web development and best practices'
+    cta:
+      enable: true
+    sidebar:
+      recent:
+        enable: true
+        title: 'Recent Articles'
+        count: 5
+      categories:
+        enable: true
+        title: 'Категорії'
+      tags:
+        enable: false
+        title: 'Популярні'
+        count: 20
+      subscribe:
+        enable: false
+        title: 'Підпистатись на новини'
+        description: 'Отримувати останні новини на Вашу пошту'
+        action: 'https://formspree.io/f/your-form-id'
+        emailName: 'email'
+        buttonText: 'Підписатись'
+        placeholder: 'Введіть Ваш email'
+        disclaimer: 'Ми шануємо Вашу приватність. Ви можете відписатись будь-коли.'
+
+build:
+  writeStats: true
+  buildStats:
+    enable: true
+  cachebusters:
+    - source: "assets/notwatching/hugo_stats\\.json"
+      target: 'css'
+    - source: "(postcss|tailwind)\\.config\\.js"
+      target: 'css'
+
+module:
+  hugoVersion:
+    extended: true
+    min: '0.80.0'
+  mounts:
+    - source: 'assets'
+      target: 'assets'
+    - disableWatch: true
+      source: 'hugo_stats.json'
+      target: 'assets/notwatching/hugo_stats.json'
+
+markup:
+  highlight:
+    noClasses: false
+    lineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNumbersInTable: true
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
+
+caches:
+  images:
+    dir: ':cacheDir/images'

@@ -1,0 +1,22 @@
+<!-- https://console.cloud.google.com/google/maps-apis/credentials?utm_source=Docs_CreateAPIKey&utm_content=Docs_static-maps-backend&_gl=1*ufs36k*_ga*MjY1MDQ2MDA5LjE3NTA5Njk1NDU.*_ga_NRWSTWS78N*czE3NTEwMTI5OTkkbzMkZzAkdDE3NTEwMTI5OTkkajYwJGwwJGgw&inv=1&invt=Ab1OPw&project=wordpress-441513 -->
+<div class="shortcode shortcode--google-maps">
+  <iframe
+    src="https://www.google.com/maps/embed/v1/place?key={{ with .Get "key" }}
+      {{ . }}
+    {{ else }}
+      {{ .Site.Params.google_maps_api_key }}
+    {{ end }}&q={{ .Get "location" }}{{ with .Get "center" }}
+      &center={{ . }}
+    {{ end }}{{ with .Get "zoom" }}
+      &zoom={{ . }}
+    {{ end }}{{ with .Get "maptype" }}
+      &maptype={{ . }}
+    {{ end }}{{ with .Get "language" }}
+      &language={{ . }}
+    {{ end }}{{ with .Get "region" }}&region={{ . }}{{ end }}"
+    frameborder="0"
+    scrolling="{{ .Get "scrolling" | default "no" }}"
+    width="{{ .Get "width" | default "100%" }}"
+    height="{{ .Get "height" | default "300px" }}">
+  </iframe>
+</div>

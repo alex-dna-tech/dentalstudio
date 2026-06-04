@@ -6,7 +6,6 @@ description: 'Learn effective strategies for managing content in Hugo, from orga
 categories: ['Content']
 tags: ['hugo', 'content-management', 'organization', 'workflow']
 featured_image: '/images/blog/blog-5.jpg'
-draft: true
 ---
 
 {{< toc >}}

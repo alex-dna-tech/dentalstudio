@@ -1,8 +1,10 @@
 {{ $path := "images/certificates" }}
 {{ $files := readDir (path.Join "assets" $path) }}
 
-{{ $background_color := .Get "background-color" | default  "bg-gray-50" }}
-<section class="section {{ $background_color }}">
+{{ $bg := .Get "background-color" | default "" }}
+<section
+  class="section"
+  {{ with $bg }}style="background-color: {{ . }};"{{ end }}>
   <div class="container">
     <div class="text-center max-w-3xl mx-auto mb-16">
       {{ with .Get "title" }}

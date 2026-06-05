@@ -1,0 +1,13 @@
+{{/* Services Grid Shortcode — shows cards from /shho-mi-mozhemo/ */}}
+{{ $limit := .Get "limit" | default 6 }}
+{{ $services := .Site.GetPage "/shho-mi-mozhemo" }}
+
+<div class="feature-grid">
+  {{ range first $limit $services.Pages.ByWeight }}
+    {{ partial "service-card.html" . }}
+  {{ end }}
+</div>
+
+<div class="text-center mt-12">
+  <a href="/shho-mi-mozhemo/" class="btn-primary">Всі послуги →</a>
+</div>

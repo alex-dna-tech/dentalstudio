@@ -2,6 +2,11 @@
 title: Консультація стоматолога
 layout: simple
 description: Консультація стоматолога в клініці DentalStudio в Києві — огляд, діагностика, складання плану лікування
+emoji: 🩺
+category: Консультація стоматолога
+category_color: "#eff6ff"
+category_badge_color: "#2563eb"
+weight: 1
 ---
 
 **Коли потрібна консультація стоматолога:**

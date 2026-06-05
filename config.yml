@@ -1,6 +1,6 @@
 title: 'DentalStudio'
 baseURL: 'https://dentalstudio.pp.ua/'
-languageCode: 'uk-ua'
+locale: 'uk-ua'
 
 menus:
   main:

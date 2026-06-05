@@ -5,6 +5,7 @@
       "article",
       "body",
       "div",
+      "em",
       "footer",
       "h1",
       "h2",
@@ -39,10 +40,12 @@
       "-top-20",
       "absolute",
       "animate",
+      "aspect-4/3",
       "aspect-square",
       "backdrop-blur-sm",
       "badge",
       "badge-icon",
+      "bg-gray-100",
       "bg-gray-50",
       "bg-linear-to-b",
       "bg-primary-100",
@@ -119,6 +122,7 @@
       "max-w-4xl",
       "max-w-6xl",
       "max-w-7xl",
+      "max-w-none!",
       "mb-1",
       "mb-12",
       "mb-16",
@@ -155,6 +159,8 @@
       "pb-20",
       "pb-32",
       "post",
+      "prose",
+      "prose-lg",
       "pt-16",
       "pt-20",
       "pt-5",
@@ -166,6 +172,7 @@
       "py-2",
       "py-20",
       "py-4",
+      "py-8",
       "relative",
       "right-0",
       "right-2",
@@ -180,6 +187,7 @@
       "shortcode",
       "shortcode--google-maps",
       "sm:flex-row",
+      "sm:grid-cols-2",
       "sm:px-6",
       "space-x-3",
       "space-x-8",
@@ -197,6 +205,7 @@
       "text-base",
       "text-blue-600",
       "text-center",
+      "text-gray-400",
       "text-gray-600",
       "text-gray-900",
       "text-lg",
@@ -227,7 +236,12 @@
       "z-50"
     ],
     "ids": [
-      "nav-toggle"
+      "nav-toggle",
+      "від-метро-золоті-ворота",
+      "від-метро-університет",
+      "сертифікати",
+      "фотогалерея",
+      "як-пішки-дійти-від-метро-до-дентал-студіо"
     ]
   }
 }

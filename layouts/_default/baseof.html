@@ -1,16 +1,8 @@
 <!doctype html>
-<html lang="{{ .Site.LanguageCode | default "uk" }}" class="h-full">
+<html lang="{{ .Site.Language.Locale | default "uk" }}" class="h-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Google Tag Manager -->
-    {{ partial "google-tag-manager" . }}
-
-
-    <!-- Google Analytics -->
-    {{ partial "google-analytics" . }}
-
 
     <!-- Title -->
     <title>
@@ -161,17 +153,6 @@
     {{ end }}
   </head>
   <body class="min-h-screen flex flex-col">
-    <!-- Google Tag Manager (noscript) -->
-    {{ if and hugo.IsProduction .Site.Params.googleTagManager }}
-      <noscript
-        ><iframe
-          src="https://www.googletagmanager.com/ns.html?id={{ .Site.Params.googleTagManager }}"
-          height="0"
-          width="0"
-          style="display:none;visibility:hidden"></iframe
-      ></noscript>
-    {{ end }}
-    <!-- End Google Tag Manager (noscript) -->
     <!-- Header -->
     <div class="fixed top-0 left-0 right-0 z-50">
       {{ partial "header" . }}

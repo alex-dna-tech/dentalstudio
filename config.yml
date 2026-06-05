@@ -1,63 +1,57 @@
-title: 'Dental Studio'
+title: 'DentalStudio'
 baseURL: 'https://dentalstudio.pp.ua/'
-languages:
-  ua:
-    languageCode: 'uk-ua'
-    languageName: 'Українська'
-    menus:
-      main:
-        - name: 'Наша клініка'
-          weight: 1
-          # url: '/nasha-klinika'
-          url: '/nashi-likari'
-        - name: 'Наші лікарі'
-          url: '/nashi-likari'
-          weight: 2
-        - name: 'Ми можемо'
-          url: '/blog'
-          weight: 3
-        - name: 'Ми можемо'
-          url: '/blog'
-          weight: 4
-        - name: 'Гарантії'
-          url: '/blog'
-          weight: 5
-        - name: 'Акції'
-          url: '/blog'
-          weight: 6
-        - name: 'Наші роботи'
-          url: '/blog'
-          weight: 7
+languageCode: 'uk-ua'
 
-      footer_column_1:
-        - name: 'Performance'
-          url: '/features/performance/'
-          weight: 1
-        - name: 'Design System'
-          url: '/features/design-system/'
-          weight: 2
-        - name: 'Developer Experience'
-          url: '/features/developer-experience/'
-          weight: 3
+menus:
+  main:
+    - name: 'Наша клініка'
+      url: '/nasha-klinika/'
+      weight: 1
+    - name: 'Наші лікарі'
+      url: '/nashi-likari/'
+      weight: 2
+    - name: 'Ми можемо'
+      url: '/shho-mi-mozhemo/'
+      weight: 3
+    - name: 'Гарантії'
+      url: '/garantiyi/'
+      weight: 4
+    - name: 'Програма лояльності'
+      url: '/programa-loyalnosti/'
+      weight: 5
+    - name: 'Наші роботи'
+      url: '/nashi-roboti/'
+      weight: 6
+    - name: 'Контакти'
+      url: '/kontakti/'
+      weight: 7
 
-      footer_column_2:
-        - name: 'Blog'
-          url: '/blog'
-          weight: 1
-        - name: 'About Us'
-          url: '/company'
-          weight: 2
-        - name: 'Careers'
-          url: '/careers'
-          weight: 3
+  footer_column_1:
+    - name: 'Наша клініка'
+      url: '/nasha-klinika/'
+      weight: 1
+    - name: 'Наші лікарі'
+      url: '/nashi-likari/'
+      weight: 2
+    - name: 'Наші роботи'
+      url: '/nashi-roboti/'
+      weight: 3
 
-      footer_column_3:
-        - name: 'License'
-          url: '/license'
-          weight: 1
-        - name: 'Privacy Policy'
-          url: '/privacy'
-          weight: 2
+  footer_column_2:
+    - name: 'Ми можемо'
+      url: '/shho-mi-mozhemo/'
+      weight: 1
+    - name: 'Гарантії'
+      url: '/garantiyi/'
+      weight: 2
+    - name: 'Програма лояльності'
+      url: '/programa-loyalnosti/'
+      weight: 3
+
+  footer_column_3:
+    - name: 'Контакти'
+      url: '/kontakti/'
+      weight: 1
 
 enableGitInfo: true
 
@@ -70,59 +64,42 @@ pagination:
   paginatePath: 'page'
 
 params:
-  author: 'Dental Studio'
-  description: ''
+  author: 'DentalStudio'
+  description: 'Стоматологічна клініка в Києві — лікування зубів, протезування, відбілювання'
 
   google_maps_api_key: 'AIzaSyBp3MaMPsKbRNyxGpW99wzLgwaqOV37ILw'
+
+  address: 'м. Київ, вул. Бульварно-Кудрявська, 29е'
+  phones:
+    - '+38 (044) 234-56-78'
+  email: 'info@dentalstudio.kiev.ua'
+  working_hours: 'Пн-Пт: 9:00–18:00, Сб-Нд: за попереднім записом'
+  license: 'АВ №565904 від 02.09.2010'
+  legal_entity: 'ПП "ДенталСтудио"'
 
   cert: 'images/certificates'
 
   cta:
     enable: true
-    title: 'Ready to Build Your SaaS Website?'
-    description: 'Join companies already using our theme to create beautiful, high-performance websites.'
+    title: 'Запишіться на консультацію'
+    description: 'Наші лікарі допоможуть вирішити будь-які стоматологічні проблеми.'
     gradient_from: '#2563eb'
     gradient_to: '#7c3aed'
     gradient_angle: 30
     primary_button:
-      text: 'Запишіться на консультацію вже сьогодні!'
-      url: '/'
+      text: 'Записатися'
+      url: '/kontakti/'
 
   social:
     facebook: 'https://www.facebook.com/Dental-Studio-158999034629525'
 
   footer:
-    column_1_title: 'Features'
-    column_2_title: 'COMPANY'
-    column_3_title: 'LEGAL'
+    column_1_title: 'Клініка'
+    column_2_title: 'Послуги'
+    column_3_title: 'Інформація'
 
   blog:
-    enable: true
-    title: 'Latest Articles'
-    subtitle: 'Learn more about web development and best practices'
-    cta:
-      enable: true
-    sidebar:
-      recent:
-        enable: true
-        title: 'Recent Articles'
-        count: 5
-      categories:
-        enable: true
-        title: 'Категорії'
-      tags:
-        enable: false
-        title: 'Популярні'
-        count: 20
-      subscribe:
-        enable: false
-        title: 'Підпистатись на новини'
-        description: 'Отримувати останні новини на Вашу пошту'
-        action: 'https://formspree.io/f/your-form-id'
-        emailName: 'email'
-        buttonText: 'Підписатись'
-        placeholder: 'Введіть Ваш email'
-        disclaimer: 'Ми шануємо Вашу приватність. Ви можете відписатись будь-коли.'
+    enable: false
 
 build:
   writeStats: true
